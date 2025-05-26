@@ -25,6 +25,7 @@ class TalentCategoryAdmin(admin.ModelAdmin):
                 obj.icon.url
             )
         return "No Image"
+
     icon_preview.short_description = "Icon Preview"
 
 
@@ -35,6 +36,7 @@ class SocialMediaLinksAdmin(admin.ModelAdmin):
 
     def artee_count(self, obj):
         return obj.artee_details.count()
+
     artee_count.short_description = "Connected Artees"
 
 
@@ -46,6 +48,7 @@ class WorkAdmin(admin.ModelAdmin):
 
     def artee_count(self, obj):
         return obj.artee_details.count()
+
     artee_count.short_description = "Connected Artees"
 
 
@@ -76,30 +79,34 @@ class ArteeDetailsAdmin(admin.ModelAdmin):
                 obj.image.url
             )
         return "No Image"
+
     image_preview.short_description = "Profile Picture"
 
     def category_list(self, obj):
         return ", ".join(c.name for c in obj.talent_category.all())
+
     category_list.short_description = "Categories"
 
 
 @admin.register(TourAnnouncement)
 class TourAnnouncementAdmin(admin.ModelAdmin):
     list_display = (
-        'caption', 'location', 'status', 'formatted_amount', 'currency', 'activities_count', 'image_preview'
+        'caption', 'location', 'event_date', 'status', 'formatted_amount', 'currency', 'activities_count',
+        'image_preview'
     )
     list_filter = ('status', 'currency', 'location')
     search_fields = ('caption', 'location', 'description')
     list_editable = ('status',)
 
     fieldsets = (
-        ('Basic Information', {'fields': ('caption', 'location', 'status', 'description')}),
+        ('Basic Information', {'fields': ('caption', 'location', 'event_date', 'status', 'description')}),
         ('Financial Details', {'fields': ('amount', 'currency')}),
         ('Media', {'fields': ('image',)}),
     )
 
     def formatted_amount(self, obj):
         return f"{obj.amount:,.2f}"
+
     formatted_amount.short_description = "Amount"
     formatted_amount.admin_order_field = 'amount'
 
@@ -110,10 +117,12 @@ class TourAnnouncementAdmin(admin.ModelAdmin):
                 obj.image.url
             )
         return "No Image"
+
     image_preview.short_description = "Image Preview"
 
     def activities_count(self, obj):
         return obj.activities.count()
+
     activities_count.short_description = "Activities"
 
 
@@ -143,10 +152,12 @@ class ActivityAdmin(admin.ModelAdmin):
                 obj.activity_image.url
             )
         return "No Image"
+
     image_preview.short_description = "Activity Image"
 
     def tours_count(self, obj):
         return obj.tour_announcement.count()
+
     tours_count.short_description = "Tours"
 
 
@@ -163,12 +174,14 @@ class SponsorshipApplicationAdmin(admin.ModelAdmin):
     fieldsets = (
         ('Personal Information', {'fields': ('name', 'stage_name', 'age', 'telephone_number', 'email')}),
         ('Talent Information', {'fields': ('talent', 'about_you', 'link_to_work', 'sample_project_file')}),
-        ('Social Media Handles', {'fields': ('ig_handle', 'x_handle', 'youtube_handle', 'ticktock_handle'), 'classes': ('collapse',)}),
+        ('Social Media Handles',
+         {'fields': ('ig_handle', 'x_handle', 'youtube_handle', 'ticktock_handle'), 'classes': ('collapse',)}),
         ('Application Details', {'fields': ('applied_on',)}),
     )
 
     def has_sample_file(self, obj):
         return bool(obj.sample_project_file)
+
     has_sample_file.short_description = "Sample File"
     has_sample_file.boolean = True
 
