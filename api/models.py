@@ -60,7 +60,7 @@ class TourAnnouncement(models.Model):
     amount = models.DecimalField(decimal_places=2, max_digits=20)
     currency = models.CharField(max_length=3, choices=CURRENCY_TYPES)
     image = models.ImageField(upload_to='images/', validators=[validate_image_size], blank=True, null=True)
-
+    event_date = models.DateField()
     def __str__(self):
         return self.caption
 
