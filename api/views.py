@@ -12,7 +12,7 @@ from .serializers import (
     TalentCategorySerializer,
     ContactSerializer,
     SponsorshipApplicationCreateSerializer, TourAnnouncementSerializer,
-ArteDetailsSerializer
+    ArteDetailsSerializer
 )
 
 
@@ -99,3 +99,8 @@ class ArteesByCategoryView(generics.ListAPIView):
     def get_queryset(self):
         category_id = self.kwargs.get('category_id')
         return ArteeDetails.objects.filter(talent_category__id=category_id)
+
+
+class ListArtee(generics.ListAPIView):
+    queryset = ArteeDetails.objects.all()
+    serializer_class = ArteDetailsSerializer

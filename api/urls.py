@@ -5,6 +5,7 @@ from .views import (
     ContactView,
     SponsorshipApplicationCreateView,
     TourAnnouncementList,
+    ListArtee,
 )
 
 urlpatterns = [
@@ -13,4 +14,5 @@ urlpatterns = [
     path('contact/', ContactView.as_view(), name='contact'),
     path('sponsorship/', SponsorshipApplicationCreateView.as_view(), name='sponsorship-apply'),
     path('tour-news/', TourAnnouncementList.as_view(), name='tour-announcement-list'),
+    path('creators/', ListArtee.as_view(), name='creators-list'),
 ]

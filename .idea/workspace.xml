@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52fb0c32-937f-4d6f-8fac-01c5f3fda5cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/afromode_backend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/templates/mail/contact_body.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/templates/mail/contact_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/templates/mail/sponsorship_body.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/templates/mail/sponsorship_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/tests/test_models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/validators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +105,9 @@
       <workItem from="1747916531796" duration="196000" />
       <workItem from="1747917002714" duration="15000" />
       <workItem from="1748244749521" duration="6612000" />
-      <workItem from="1748251661878" duration="11509000" />
+      <workItem from="1748251661878" duration="13484000" />
+      <workItem from="1748278212595" duration="11000" />
+      <workItem from="1748290596235" duration="243000" />
     </task>
     <servers />
   </component>
