@@ -1,0 +1,21 @@
+You have received a new sponsorship application with the following details:
+
+Applicant Name:   {{ name }}
+Stage Name:       {{ stage_name }}
+Age:              {{ age }}
+Talent:           {{ talent }}
+Contact Email:    {{ email }}
+
+About the Applicant:
+{{ about_you }}
+
+Social Handles:
+- Instagram:      {{ ig_handle }}
+- X (Twitter):    {{ x_handle }}
+- YouTube:        {{ youtube_handle }}
+- TikTok:         {{ ticktock_handle }}
+
+Portfolio Link:
+{{ link_to_work }}
+
+Please review the attached sample project file for more information.

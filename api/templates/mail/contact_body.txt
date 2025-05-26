@@ -1,0 +1,7 @@
+You’ve got a new message:
+
+Name:    {{ name }}
+Email:   {{ email }}
+
+Message:
+{{ message }}
